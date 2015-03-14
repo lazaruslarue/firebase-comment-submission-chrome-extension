@@ -13,8 +13,6 @@ https://developer.chrome.com/extensions/getstarted
 
 ## otherstuff...
 
-
-
 /* libs */
 // RXjs
 // Jquery / Angular ?
@@ -29,4 +27,4 @@ https://developer.chrome.com/extensions/getstarted
 /* Action */
 // when the popup loads
 // get the current url
-// send the 
+// send the

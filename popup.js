@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     getImageUrl(url, function(imageUrl, width, height) {
 
-      renderStatus('Search term: ' + url + '\n' +
+      renderStatus('ASSSSS term: ' + url + '\n' +
           'Google image search result: ' + imageUrl);
       var imageResult = document.getElementById('image-result');
       // Explicitly set the width/height to minimize the number of reflows. For

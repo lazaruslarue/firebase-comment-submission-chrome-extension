@@ -4,15 +4,22 @@
   "name": "twrkr",
   "description": "twrkr all up in your browser",
   "version": "2.55555",
-
+  "content_security_policy": "script-src 'self' https://*.firebase.com https://*.firebaseio.com; object-src 'self'",
   "browser_action": {
     "default_icon": "icon.png",
     "default_popup": "popup.html"
   },
+
   "permissions": [
     "activeTab",
+    "background",
     "tabs",
     "https://ajax.googleapis.com/",
-    "https://twrkr.firebaseio.com/"
-  ]
+    "https://*.firebase.com/",
+    "https://*.firebaseio.com/"
+  ],
+  "background": {
+    "page": "background.html",
+    "persistent": true
+  }
 }

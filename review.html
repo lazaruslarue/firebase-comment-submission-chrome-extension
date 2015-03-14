@@ -1,0 +1,32 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head ng-csp>
+    <title>details</title>
+    <script type="text/javascript" src="lib/firebase/firebase-debug.js"></script>
+    <script type="text/javascript" src="lib/jquery/dist/jquery.js"></script>
+    <style>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+      }
+      #status {
+        /* avoid an excessively wide status text */
+        white-space: pre;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 400px;
+      }
+    </style>
+  </head>
+  <body  >
+    <div id="comments">
+
+    </div>
+    <script type="text/javascript" src="review.js"></script>
+  </body>
+</html>

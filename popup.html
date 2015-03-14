@@ -5,8 +5,12 @@
  value "popup.html".
  -->
 <html>
-  <head>
-    <title>Getting Started Extension's Popup</title>
+  <head ng-csp>
+    <title>details</title>
+<script type="text/javascript" src="lib/angular/angular.js"></script>
+<script type="text/javascript" src="lib/firebase/firebase-debug.js"></script>
+<script type="text/javascript" src="lib/rxjs/dist/rx.all.js"></script>
+<script type="text/javascript" src="rx.watch.js"></script>
     <style>
       body {
         font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
@@ -20,18 +24,15 @@
         max-width: 400px;
       }
     </style>
-
-    <!--
-      - JavaScript and HTML must be in separate files: see our Content Security
-      - Policy documentation[1] for details and explanation.
-      -
-      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
-     -->
-    <script src="popup.js"></script>
   </head>
-  <body>
-    <div id="status"></div>
-    <img id="image-result" hidden>
+  <body ng-app="twrkr" >
+    <form name="commentform" ng-controller="twrkCtrl">
+      URL:
+      <input type="text" ng-model="submission.pageurl" id="pageurl"></input>
+      Suggestion:
+      <input type="text" ng-model="submission.comment" id="commentbox" style="height: 100px; width: 250px;">
+      <input type="button" ng-click="send(submission)">Send Your Idea</button>
+    </form>
+    <script type="text/javascript" src="pop.js"></script>
   </body>
 </html>
-
